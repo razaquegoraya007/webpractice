@@ -14,3 +14,8 @@ const even = originalArray.filter(number => {
   });
 
 console.log(even)
+
+let numbers = [1, 2, 3, 5, 6,7];
+let sum = numbers.reduce((total, item) => total + item, 0);
+
+console.log(sum);

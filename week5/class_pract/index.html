@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <div style="width: 300px; background-color: aqua; float: right;">DIV1</div>
+    <div style="width: 300px; background-color: red; float: left;">DIV2</div>
+    <div style="width: 500px; background-color:black; float: right;">DIV3</div> -->
+
+    <!-- CSS FLEX-BOX Model (was made for mobile phone responsive desing to make it appealing)-->
+    <style>
+        .parent{
+            height: 100vh;
+            display:flex;
+            background-color: dodgerblue;
+            flex-direction: row;
+            /* flex-wrap: wrap;
+            flex-direction: row; */
+            justify-content:space-evenly;
+            align-items: center;
+            /* align items gives veritcal alignments  */
+            /* but justify content give horizontal both are dependent on flex */
+
+        }
+        .parent > div{
+            width: 100px;
+            background-color: red;
+            text-align: center;
+            margin: 5px;
+            padding: 5px;
+        }
+
+        /* space around giv half space on edges and space-evenly give equal space   */
+    </style>
+    <div class="parent">
+        <div class="child1">Child1</div>
+        <div class="child2">Child2</div>
+        <div class="child2">Child3</div>
+        <div class="child3">Child4</div>
+        <!-- <div class="child3">Child5</div>
+        <div class="child3">Child6</div>
+        <div class="child3">Child7</div>
+        <div class="child3">Child8</div> -->
+
+    </div>
+
+
+</body>
+</html>

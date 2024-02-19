@@ -17,3 +17,5 @@ for (let key in myobject){
         }
     }
 }
+
+// for in and for off loops

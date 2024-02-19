@@ -30,3 +30,4 @@ const secondarray = ["B","C"]
 // console.log(result)
 // console.log(firstarray.includes("Mango"));
 
+console.log(firstarray.reverse())

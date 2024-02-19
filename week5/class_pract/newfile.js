@@ -8,3 +8,10 @@ function doubleArrayValues(arr,input) {
 const doubledArray = doubleArrayValues(originalArray,3);
 console.log(doubledArray);
 
+const even = originalArray.filter(number => {
+    // return number % 2 === 0;
+    return number % 3;
+  });
+
+console.log(even)
+

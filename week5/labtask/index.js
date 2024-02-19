@@ -1,4 +1,3 @@
-
 // Task 1
 console.log("First Task")
 function reverseArray(aray){
@@ -27,6 +26,9 @@ let numbers = [1, 2, 3];
 let result = applyFunction(numbers, (x) => x * 2);
 
 console.log(result);
+
+
+
 
 
 

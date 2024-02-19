@@ -1,6 +1,6 @@
 // code practice
 
-console.log("Class practice")
+console.log("Class Practice")
 const originalArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 function doubleArrayValues(arr,input) {
     return arr.map(value => value * input);
@@ -14,4 +14,3 @@ const even = originalArray.filter(number => {
   });
 
 console.log(even)
-

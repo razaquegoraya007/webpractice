@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Number Guessing Game</title>
+<style>
+
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: cadetblue;
+    }
+    h1 {
+        margin-top: 50px;
+    }
+    #guessInput {
+        padding: 5px;
+        width: 50px;
+    }
+    #message {
+        margin-top: 20px;
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+<h1>Number Guessing Game</h1>
+<p>Guess a number between 1 and 10:</p>
+<input type="number" id="guessInput" min="1" max="10">
+<button onclick="checkGuess()">Submit Guess</button>
+<p id="message"></p>
+
+<script>
+    // Generate a random number between 1 and 10
+    const randomNumber = Math.floor(Math.random() * 10) + 1;
+    let attempts = 3; // Number of attempts
+
+    function checkGuess() {
+        const guess = parseInt(document.getElementById('guessInput').value);
+        if (isNaN(guess) || guess < 1 || guess > 10) {
+            setMessage('Please enter a valid number between 1 and 10.');
+            return;
+        }
+
+        if (guess === randomNumber) {
+            setMessage(`Congratulations! You guessed the correct number (${randomNumber}).`);
+            disableInputAndButton();
+        } else {
+            attempts--;
+            if (attempts === 0) {
+                setMessage(`Sorry, you've run out of attempts. The correct number was ${randomNumber}.`);
+                disableInputAndButton();
+            } else {
+                setMessage(`Incorrect! You have ${attempts} attempts left.`);
+            }
+        }
+    }
+
+    function setMessage(message) {
+        document.getElementById('message').textContent = message;
+    }
+
+    function disableInputAndButton() {
+        document.getElementById('guessInput').disabled = true;
+        document.querySelector('button').disabled = true;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+
+.maindiv{
+    background-color: bisque;
+    width: max-content;
+    height: 500px;
+}
+
+  .containertop {
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin: 20px;
+    height: 100px;
+  }
+.containerbottom{
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    margin: 20px;
+    height: 300px;
+}
+.containerbottom > div {
+  background-color:gold;
+  height: 50px;
+  width: 50px;
+
+}
+  .checkbox {
+    margin-bottom: 5px;
+  }

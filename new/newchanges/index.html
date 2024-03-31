@@ -3,33 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab task practice</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Flexbox vs Grid</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="maindiv">
-        <div class="containertop" id="checkboxContainer">
-          <label class="checkbox">
-            <input type="checkbox" id="checkbox1"> Flex-Row
-          </label>
-          <label class="checkbox">
-            <input type="checkbox" id="checkbox2"> Flex-Column
-          </label>
-          <label class="checkbox">
-            <input type="checkbox" id="checkbox3"> Flex-Row-Reverse
-          </label>
-          <label class="checkbox">
-            <input type="checkbox" id="checkbox4"> Flex-Column-Reverse
-          </label>
-        </div>
-        <div class="containerbottom">
-            <div>Div 1</div>
-            <div>Div 2</div>
-            <div>Div 3</div>
-            <div>Div 4</div>
-        </div>
+    <div class="container" id="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
     </div>
-
-        <script src="script.js"></script>
+    <div>
+        <label>Choose layout:</label>
+        <select id="layoutSelect">
+            <option value="flex">Flexbox</option>
+            <option value="grid">Grid</option>
+        </select>
+    </div>
+    <div>
+        <label>Choose flex direction:</label>
+        <select id="flexDirectionSelect">
+            <option value="row">Row</option>
+            <option value="row-reverse">Row Reverse</option>
+            <option value="column">Column</option>
+            <option value="column-reverse">Column Reverse</option>
+        </select>
+    </div>
+    <div>
+        <label>Choose justify-content:</label>
+        <select id="justifyContentSelect">
+            <option value="flex-start">Flex Start</option>
+            <option value="flex-end">Flex End</option>
+            <option value="center">Center</option>
+            <option value="space-between">Space Between</option>
+            <option value="space-around">Space Around</option>
+            <option value="space-evenly">Space Evenly</option>
+        </select>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
+
+

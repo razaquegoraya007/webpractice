@@ -1,40 +1,25 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const checkbox1 = document.getElementById('checkbox1');
-    const checkbox2 = document.getElementById('checkbox2');
-    const checkbox3 = document.getElementById('checkbox3');
-    const checkbox4 = document.getElementById('checkbox4');
-    const containerBottom = document.querySelector('.containerbottom');
+const container = document.getElementById('container');
+const layoutSelect = document.getElementById('layoutSelect');
+const flexDirectionSelect = document.getElementById('flexDirectionSelect');
+const justifyContentSelect = document.getElementById('justifyContentSelect');
 
-    checkbox1.addEventListener('change', function() {
-        if (this.checked) {
-            containerBottom.style.flexDirection = 'row';
-        } else {
-            containerBottom.style.flexDirection = '';
-        }
-    });
+layoutSelect.addEventListener('change', updateLayout);
+flexDirectionSelect.addEventListener('change', updateLayout);
+justifyContentSelect.addEventListener('change', updateLayout);
 
-    checkbox2.addEventListener('change', function() {
-        if (this.checked) {
-            containerBottom.style.flexDirection = 'column';
-        } else {
-            containerBottom.style.flexDirection = '';
-        }
-    });
+function updateLayout() {
+    const selectedLayout = layoutSelect.value;
+    const selectedFlexDirection = flexDirectionSelect.value;
+    const selectedJustifyContent = justifyContentSelect.value;
 
-    checkbox3.addEventListener('change', function() {
-        if (this.checked) {
-            containerBottom.style.flexDirection = 'row-reverse';
-        } else {
-            containerBottom.style.flexDirection = '';
-        }
-    });
+    container.style.display = selectedLayout === 'flex' ? 'flex' : 'grid';
 
-    checkbox4.addEventListener('change', function() {
-        if (this.checked) {
-            containerBottom.style.flexDirection = 'column-reverse';
-        } else {
-            containerBottom.style.flexDirection = '';
-        }
-    });
-});
+    if (selectedLayout === 'flex') {
+        container.style.flexDirection = selectedFlexDirection;
+        container.style.justifyContent = selectedJustifyContent;
+    } else if (selectedLayout === 'grid') {
+        container.style.gridTemplateColumns = "repeat(auto-fill, minmax(200px, 1fr))";
+    }
+}
+
 

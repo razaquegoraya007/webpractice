@@ -2,7 +2,7 @@
 var hOne = document.querySelector("h1")
 console.log(hOne)
 // Changing H1
-hOne.innerHTML = "DOM Parhly"
+// hOne.innerHTML = "DOM Parhly"
 
 
 // Changing Style in CSS Selection
@@ -15,3 +15,5 @@ hOne.addEventListener("click",function(){
     hOne.style.backgroundColor = "#000"
     hOne.style.color = "yellow"
 })
+
+

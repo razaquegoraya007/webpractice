@@ -89,6 +89,8 @@ function addToCart(product) {
   renderCart();
 }
 
+
+
 function renderCart() {
   cartItemsElement.innerHTML = "";
   cart.forEach((product) => {

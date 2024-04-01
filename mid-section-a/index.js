@@ -41,6 +41,11 @@ const products = [
   },
 ];
 const container = document.getElementById("product-container");
+const cartItemsElement = document.getElementById("cart-items");
+const cartTotalElement = document.getElementById("cart-total");
+
+let cart = [];
+
 products.forEach((product) => {
   const productDiv = document.createElement("div");
   productDiv.classList.add("product");
@@ -67,6 +72,7 @@ products.forEach((product) => {
   const button = document.createElement("button");
   button.textContent = "Add to Cart";
   button.classList.add("add-to-cart-btn");
+  button.addEventListener("click", () => addToCart(product));
 
   infoDiv.appendChild(name);
   infoDiv.appendChild(price);
@@ -77,3 +83,25 @@ products.forEach((product) => {
 
   container.appendChild(productDiv);
 });
+
+function addToCart(product) {
+  cart.push(product);
+  renderCart();
+}
+
+function renderCart() {
+  cartItemsElement.innerHTML = "";
+  cart.forEach((product) => {
+    const li = document.createElement("li");
+    li.textContent = product.name + " - $" + product.price.toFixed(2);
+    cartItemsElement.appendChild(li);
+  });
+  const total = cart.reduce((acc, product) => acc + product.price, 0);
+  cartTotalElement.textContent = "Total: $" + total.toFixed(2);
+
+}
+
+
+
+
+

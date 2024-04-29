@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="promiseButton">Click Me</button>
+<div id="result"></div>
+
+<script>
+document.getElementById('promiseButton').addEventListener('click', function() {
+    // Simulating an asynchronous operation with a promise
+    var promise = new Promise(function(resolve, reject) {
+        // Simulating a delay with setTimeout
+        setTimeout(function() {
+            // Simulating a successful response after 2 seconds
+            resolve("Promise resolved!");
+        }, 2000);
+    });
+
+    // Displaying the promise result after it resolves
+    promise.then(function(result) {
+        document.getElementById('result').innerText = result;
+    });
+});
+</script>
+</body>
+</html>

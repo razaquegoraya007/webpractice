@@ -1,0 +1,42 @@
+.main-container
+{
+  display: flex;
+  justify-content: space-around;
+}
+
+.users-container
+{
+  padding: 10px;
+  height: auto;
+  width: 50%;
+
+  background-color: antiquewhite;
+}
+.posts-container
+{
+  height: auto;
+  padding: 10px;
+  width: 50%;
+  background-color: rgb(199, 199, 199);
+}
+
+.users
+{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+ 
+  
+}
+.posts {
+  display: grid;
+  gap: 20px;
+  justify-content: flex-start; 
+  text-align: start;/* Align content to the left */
+}
+
+.post{
+  border : 2px rgb(241, 66, 104) dotted;
+  border-radius: 10px;
+}
+
